@@ -202,6 +202,60 @@ module.exports = handle = (client, Client) => {
             let zz = await client.prepareMessageFromContent(data.from, {buttonsMessage: buttonMessage}, {})
             client.relayWAMessage(zz, {waitForAck: true}) 
 		})
+		        Client.cmd.on('hi', async (data) => {
+			if(isLimit(data.sender)) return data.reply(mess.limit)
+			const mediaMsg = await client.prepareMessageMedia(await getBuffer(configs.imgUrl), 'imageMessage')
+            const buttonMessage = {
+			      contentText: '*Hello I am Kaguya use !help to see the commands*',
+				  footerText: '©kaguya ∞ MADE BY HUMAN ON EARTH',
+                        "contextInfo": {
+                              participant: data.sender,
+                              stanzaId: data.message.key.id,
+                              quotedMessage: data.message.message,
+							  },
+                              buttons: [
+                                {
+                                 buttonId: `${data.prefix}help`,
+                                 buttonText: {
+                                    displayText: `Commands`
+                                  },
+                                  "type": "RESPONSE"
+                                },
+                                  ],
+                                   headerType: 4,
+                                ...mediaMsg 
+                                }
+            let zz = await client.prepareMessageFromContent(data.from, {buttonsMessage: buttonMessage}, {})
+            client.relayWAMessage(zz, {waitForAck: true}) 
+		})
+		        Client.cmd.on('wallpaper', async (data) => {
+			if(isLimit(data.sender)) return data.reply(mess.limit)
+			const res = await axios.get(`https://nekos.life/api/v2/img/wallpaper`)
+			const mediaMsg = await client.prepareMessageMedia(await getBuffer(res.data.url), 'imageMessage')
+            const buttonMessage = {
+			      contentText: 'Wallpaper',
+				  footerText: 'Press the button below to get a random anime wallpaper image',
+                        "contextInfo": {
+                              participant: data.sender,
+                              stanzaId: data.message.key.id,
+                              quotedMessage: data.message.message,
+							  },
+                              buttons: [
+                                {
+                                 buttonId: `${data.prefix}wallpaper`,
+                                 buttonText: {
+                                    displayText: `⏯️ Get again`
+                                  },
+                                  "type": "RESPONSE"
+                                },
+                                  ],
+                                   headerType: 4,
+                                ...mediaMsg 
+                                }
+            let zz = await client.prepareMessageFromContent(data.from, {buttonsMessage: buttonMessage}, {})
+            client.relayWAMessage(zz, {waitForAck: true}) 
+		})
+
 		Client.cmd.on('husbu', async (data) => {
 			if(isLimit(data.sender)) return data.reply(mess.limit)
 			const res = await axios.get(`https://zxbott.herokuapp.com/husbu`)
@@ -962,7 +1016,7 @@ module.exports = handle = (client, Client) => {
 					Client.self = false
 					data.reply('OK')
 				break
-                case 'hi':
+                case 'h':
                 case 'kaguya':
  	                 const mediaMsg = await client.prepareMessageMedia(await getBuffer(configs.imgUrl), 'imageMessage')
                      const buttonMessage = {
@@ -1419,7 +1473,7 @@ module.exports = handle = (client, Client) => {
                             }).catch(() => Client.reply(from, 'Internal server *[ERROR❎]*!, try again later', message))
                     } else Client.reply(from, 'Wrong format!', message)
                     break
-                case 'wallpaper':
+                case 'w':
 				    try{
                     if(isLimit(data.sender)) return data.reply(mess.limit)
                     if(data.body == "") return data.reply(`Send orders  *${data.prefix}wallpaper [ query ]*\nEx : ${data.prefix}wallpaper Kaguya`)
