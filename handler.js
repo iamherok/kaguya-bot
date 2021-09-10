@@ -964,7 +964,7 @@ module.exports = handle = (client, Client) => {
 				break
                 case 'hi':
                 case 'kaguya':
- 	                 const mediaMsg = await client.prepareMessageMedia(await getBuffer(configs.imgUrl), 'imageMessage')
+ 	                  const mediaMsg = await client.prepareMessageMedia(fs.readFileSync('./lib/fake.jpeg'), 'imageMessage')
                      const buttonMessage = {
                            contentText: menu(data.prefix, data.pushname),
                            footerText: '©kaguya ∞ MADE BY HUMAN ON EARTH',
