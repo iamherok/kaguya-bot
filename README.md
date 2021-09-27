@@ -15,7 +15,6 @@
    <a href="https://github.com/justpiple/whatsapp-bot/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-<img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp%20Das-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>(https://wa.me/919832361550) 
  
 </div>
 
