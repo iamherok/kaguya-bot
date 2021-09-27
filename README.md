@@ -1,5 +1,11 @@
+
+
+<a href="https://www.linkpicture.com/view.php?img=LPic6151c4ee249821652129900"><img src="https://www.linkpicture.com/q/images-3_74.jpeg" type="image"></a>
+
+
+
 <div align="center">
-<img alt="GitHub" src="https://img.shields.io/badge/WHATSAPP%20BOT-25D32?style=for-the-badge&logoColor=darkgreen"/>
+<img alt="GitHub" src="https://img.shields.io/badge/WHATSAPP%20Kaguya Bot-25D32?style=for-the-badge&logoColor=darkgreen"/>
 <br><br>
   
 > A whatsapp bot made using adiwajshing/Baileys library
@@ -9,8 +15,7 @@
    <a href="https://github.com/justpiple/whatsapp-bot/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-</p>
-<a href="https://chat.whatsapp.com/EV2o7Y4C2XNDT5AAQPZjqt"><img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp%20Das-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>(https://wa.me/919832361550) 
  
 </div>
 
@@ -22,8 +27,8 @@
 ### Install ⬇️
 
 ```bash
-> git clone https://github.com/justpiple/whatsapp-bot/
-> cd whatsapp-bot
+> git clone https://github.com/iamherok/kaguya-bot/
+> cd kaguya-bot
 > npm i
 ```
 ### For termux users before running the above command write this command
@@ -47,10 +52,6 @@
 after start it you need to scan the qr
 #### Session name and options is optional
 ### Contact me
-
-- [TELEGRAM](https://t.me/justpiple)
-- [WHATSAPP](http://wa.me/62813309603730)
-- [GROUP CHAT WHATSAPP](https://chat.whatsapp.com/EV2o7Y4C2XNDT5AAQPZjqt)
 
 
 ## 🙏 Special Thanks to
